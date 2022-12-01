@@ -6,6 +6,9 @@
 - > Languages used: Python, HTML, CSS
 
 - > Technologies used: Flask, SQL, Jinja, Bootstrap
+![FoodHub1](https://user-images.githubusercontent.com/98488999/205149688-93e04628-b128-491e-ae0f-ddff9ed4ead8.JPG)
+![FoodHub2](https://user-images.githubusercontent.com/98488999/205149700-748e3c9f-11eb-4900-b0db-f71651a8083b.JPG)
+![FoodHub3](https://user-images.githubusercontent.com/98488999/205149708-593a8118-31ef-4611-b59e-93da12ff3b73.JPG)
 
 ### Backend:
 - **app.py**: Contains code involved in the functionality of the application. This includes starting the Flask session and routes that take users to the different pages.
