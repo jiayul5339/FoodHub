@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <form action="/" method="GET">
+        <div class="search-bar">
+            <input class="search" type="search" name="search" placeholder="Search For a Recipe" autocomplete="off"/>
+            <button class="search-button" id="search-button" type="submit">Search</button>
+        </div>
+    </form>
+
+    <article class="results">
+        <div class="grid-container">
+            {% for recipe in recipes %}
+                <div class="grid-item">
+                    <form action="/recipe" method="GET">
+                        <img class="food-image" src="{{ recipe['image'] }}">
+                        <div class="recipe-name">
+                            <button class="card" name="id" type="submit" value="{{ recipe['id'] }}">{{ recipe["title"] }}</button>
+                        </div>
+                    </form>
+                </div>
+            {% endfor %}
+        </table>
+    </article>
+
+{% endblock %}

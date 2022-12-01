@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Recipes
+{% endblock %}
+
+{% block main %}
+<article class="recipe">
+    <img class="recipe-image" src="{{ recipeInfo['image'] }}" width="500" height="500">
+
+    <div class="ingredients">
+        <h1 class="recipe-title">{{ recipeInfo["title"] }}
+            <form class="favorites" action="/favorite" method="POST">
+                <button class="fav-button" type="submit" name="id" value="{{ id }}">
+                    <i class="material-symbols-outlined">favorite</i>
+                    <div class="tooltip-fav">Favorite</div>
+                </button>
+            </form>
+        </h1>
+
+        <h2 class="ingredient-title">Ingredients used</h2>
+        <ul class="recipe-ingredients">
+            {% for ingredient in ingredients %}
+               <li class="ingredient-list">{{ ingredient["name"].capitalize() }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <button class="recipeLink">
+        <a class="button" href="{{ recipeInfo['sourceUrl'] }}" target="_blank"> Click here to view full recipe</a>
+    </button>
+</article>
+{% endblock %}

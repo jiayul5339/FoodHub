@@ -1,0 +1,260 @@
+/* Size for brand */
+body {
+    font-family: interstate, sans-serif;;
+    padding-top: 50px;
+}
+
+
+.navigation {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+nav .navbar-brand {
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .food {
+    color: black;
+    font-weight: 500;
+}
+
+nav .navbar-brand .hub {
+    color: #FFFFF0;
+    font-weight: 500;
+}
+
+.error {
+    color:red;
+    margin-bottom: 10px;
+}
+
+.label {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.hub {
+    border:1px;
+    background-color: rgb(0, 209, 141);
+    border-radius: 8px;
+}
+
+.input-group {
+    margin: auto;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    height: 35px;
+}
+
+
+
+.search {
+    outline: None;
+    border: None;
+    border-radius: 3px;
+    margin-right: -2px;
+    width: 400px;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.search-button {
+    width: 75px;
+    border: None;
+    background-color: rgb(0, 209, 141);
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+
+.results {
+    margin-top: 50px;
+}
+
+.grid-container {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 5px;
+}
+
+@media (max-width: 700px) {
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1099px) {
+    .grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1100px) {
+    .grid-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.grid-item {
+    margin-left: 5px;
+    margin-right:5px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.food-image {
+    width:100%;
+}
+
+.recipe-name {
+    background: white;
+    padding: .5rem;
+    align: center;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    font: Monospace;
+    background-color: rgb(225, 255, 255);
+    border: None;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background-color 0.15s;
+}
+
+.card:hover {
+    background-color: rgb(165, 255, 255);
+}
+
+.recipe-image {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ingredients {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recipe-title {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.ingredient-title {
+    margin-right: 250px;
+}
+
+.recipe-ingredients {
+    display: inline-block;
+    text-align: center;
+    list-style-position: inside;
+}
+
+.ingredient-list {
+    margin-right: 200px;
+    text-align: left;
+}
+
+.favorites {
+    display: inline-block;
+    margin-right: 20px
+}
+
+.fav-button {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background: white;
+    border: None;
+    align-items: center;
+}
+
+.tooltip-fav {
+    background-color: gray;
+    color: white;
+    margin-bottom: 20px;
+    padding: 4px 8px;
+    position: absolute;
+    font-size: 12px;
+    border-radius: 4px;
+    bottom: -40px;
+    right: -60px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.fav-button .material-symbols-outlined {
+    font-size: 50px;
+    width: 50px;
+    transition: fill 0.2s;
+}
+
+.material-symbols-outlined:hover {
+    color: red;
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.fav-button:hover .tooltip-fav {
+    opacity: 1;
+}
+
+
+.recipeLink {
+    background-color: rgb(225, 255, 255);
+    color: rgb(0, 207, 0);
+
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.fav-recipes-table {
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.fav-recipe-item {
+    border-bottom: 2px solid;
+}
+
+
+.fav-recipe-img {
+    width:300px;
+    padding-right: 100px;
+}
+
+.fav-recipe-url {
+    padding-left: 100px;
+}
+
+.delete-button .material-symbols-outlined {
+    margin-top: 5px;
+    margin-left: 50px;
+    font-size: 30px;
+    transition: color 0.1s;
+    border: none;
+    background-color: white;
+}

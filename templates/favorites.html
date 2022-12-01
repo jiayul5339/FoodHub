@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Favorite Recipes
+{% endblock %}
+
+{% block main %}
+    <h2>My Recipes</h2>
+    <table class="fav-recipes-table">
+        <tbody>
+            {% for favRecipe in favRecipes %}
+                <tr class="fav-recipe-item">
+                    <td>
+                        <img class="fav-recipe-img" src="{{ favRecipe['recipe_image'] }}">
+                    </td>
+
+                    <td class="fav-recipe-name">
+                        {{ favRecipe["recipe_name" ]}}
+                    </td>
+
+                    <td class="fav-recipe-url">
+                        <a href="{{ favRecipe['recipe_url'] }}" target="_blank"> View Recipe</a>
+                    </td>
+
+                    <td class="delete-button">
+                        <form action="/delete" method="POST">
+                            <button class="material-symbols-outlined" type="submit" name="id" value="{{ favRecipe['recipe_id'] }}" method="POST">
+                                Delete
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
